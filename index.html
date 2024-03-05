@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" type="image/png"
+        href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+    <title>Spotify Clone Using HTML, CSS & JS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left">
+            <div class="home bg-grey flex-column border-radius-8">
+                <div class="spotify_logo">
+                    <img src="images/logo.svg" alt="Spofity Logo">
+                    <img id="xMark" src="images/x_mark.svg" alt="Cancel Bar X Sign"></div>
+                <div class="home_logo flex">
+                    <img src="images/home.svg" alt="Home logo">
+                    <span>Home</span>
+                </div>
+                <div class="search_logo flex">
+                    <img class="search_logo_img" src="images/search.svg" alt="Search logo">
+                    <span>Search</span>
+                </div>
+            </div>
+            <div class="library bg-grey border-radius-8">
+                <div class="libraray_logo flex align-center">
+                    <div class="lib_logo_content flex align-center">
+                        <img src="images/libraray.svg" alt="Library Logo">
+                        <span>Your Library</span>
+                    </div>
+                    <div class="lib_logo_plus">
+                        <a href="#"><img src="images/plus.svg" alt="Plus Sign"></a>
+                    </div>
+                </div>
+                <div class="songList">
+                    <ul> </ul>
+                </div>
+                <div class="library_footer">
+                    <div class="lib_footer_links flex">
+                        <div class="div"><a href="#">Legal</a></div>
+                        <div class="div"><a href="#">Safety & Privacy Center</a></div>
+                        <div class="div"><a href="#">Privacy Policy</a></div>
+                        <div class="div"><a href="#">Cookies</a></div>
+                        <div class="div"><a href="#">About Ads</a></div>
+                        <div class="div"><a href="#">Accessibilty</a></div>
+                    </div>
+                    <div class="cookies"><a href="#">Cookies</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header bg-grey flex">
+                <div class="header_left flex">
+                    <img id="hamburger" src="images/hamburger.svg" alt="Bar">
+                    <img class="headerLeftArrow" src="images/angular_left.svg" alt="Left Angular Sign">
+                    <img class="headerRightArrow" src="images/angular_right.svg" alt="Right Angular Sign">
+                </div>
+                <div class="header_right flex">
+                    <a href="#">Premium</a>
+                    <a href="#">Support</a>
+                    <a href="#">Download</a>
+                    <div>|</div>
+                    <a href="#">Sign up</a>
+                    <button id="login">Log in</button>
+                </div>
+            </div>
+            <div class="spotify_playlist">
+                <h2>Spotify Playlists</h2>
+                <div class="cards flex">
+                    
+                </div>
+                <div class="spotify_playbar">
+                    <div class="songcontrol">
+                        <div class="songinfo">
+                        </div>
+                        <div class="song_buttons">
+                            <img id="previous" src="images/prevsong.svg" alt="Previous Song Button">
+                            <img id="play" src="images/playsong.svg" alt="Play Song Button">
+                            <img id="next" src="images/nextsong.svg" alt="Next Song Button">
+                        </div>
+                        <div class="volume_duration">
+                            <div class="songtime">
+                            </div>
+                            <div class="volume">
+                                <img id="volume-icon" src="images/volume.svg" alt="">
+                                <div class="volume-range">
+                                    <input type="range" name="volume">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seekbar">
+                        <div class="seekbar_circle"></div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

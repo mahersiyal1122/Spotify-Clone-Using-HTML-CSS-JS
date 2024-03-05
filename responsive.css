@@ -1,0 +1,481 @@
+:root{
+    --top1:120px;
+    --top2:260px;
+}
+
+@media screen and (max-width: 1200px) {
+    .library {
+        padding: 8px 8px;
+    }
+
+    .songList ul {
+        padding: 2px;
+    }
+
+    .songList {
+        margin: 20px 0px;
+    }
+
+    .songList ul li {
+        gap: 4px;
+        padding: 4px 10px;
+        margin: 8px 5px;
+        height: 45px;
+    }
+
+    .musicImg {
+        gap: 5px;
+    }
+
+    .musicImg span {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .musicImg img {
+        width: 20px;
+    }
+
+    .playnow img {
+        width: 20px;
+    }
+
+
+    .header {
+        height: 55px;
+        padding: 0 14px;
+    }
+
+    .header_left img {
+        width: 12px;
+    }
+
+    .header_right a {
+        font-size: 14px;
+    }
+
+    .header_right button {
+        font-size: 14px;
+        margin-left: 5px;
+        padding: 10px 20px;
+    }
+
+    .spotify_playlist {
+        height: 90.5vh;
+    }
+
+
+
+
+
+    .cards {
+        height: 45vh;
+        margin: 20px 0;
+        gap: 16px;
+    }
+
+    .card {
+        width: 122px;
+        height: 180px;
+    }
+/* ----------------------------------------------------------------------------------------------------------------- */
+    .card div {
+        top: var(--top1);
+    }
+
+    .play-button {
+        width: 35px;
+    }
+
+    .card:hover{
+        --top1:75px;
+    }
+
+    .card img {
+        width: 122px;
+        height: 122px;
+        border-radius: 12px;
+        padding-bottom: 1px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+        padding: 3px 0;
+    }
+
+    .card p {
+        display: block;
+        font-size: 10px;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+
+
+    .spotify_playbar {
+        margin-left: 30px;
+        width: 61vw;
+        height: 35px;
+    }
+
+    .song_buttons img {
+        width: 25px;
+    }
+
+    .seekbar {
+        width: 95%;
+        height: 3px;
+        bottom: 4px;
+    }
+
+    .seekbar_circle {
+        width: 15px;
+        height: 15px;
+        bottom: 8px;
+    }
+
+    .songcontrol {
+        gap: 5px;
+    }
+
+    .songinfo,
+    .songtime {
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        padding: 3px 8px;
+    }
+}
+
+@media screen and (max-width:961px) {
+
+    .header_left #hamburger {
+        display: block;
+        background: none;
+        filter: invert(1);
+        width: 25px;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .header_left #hamburger:hover {
+        background-color: rgb(255, 255, 255);
+        border-radius: 6px;
+    }
+
+    .header_left .headerLeftArrow,
+    .header_left .headerRightArrow {
+        display: none;
+    }
+
+    #xMark {
+        display: block;
+    }
+
+    .left {
+        background-color: black;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 2;
+        width: 30vw;
+        height: 98vh;
+        left: -120%;
+        transition: left 0.8s ease 0.1ms;
+        margin: 3px;
+    }
+
+    .right {
+        width: 100vw;
+        margin: 8px;
+    }
+
+    /* -----------------------------------  Spotify Playbar ------------------------------------ */
+    .spotify_playbar {
+        width: 89vw;
+        height: 45px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+
+    .song_buttons img {
+        width: 30px;
+    }
+
+    .seekbar {
+        width: 97%;
+        height: 5px;
+        bottom: 6px;
+    }
+
+    .seekbar_circle {
+        width: 18px;
+        height: 18px;
+        bottom: 7px;
+    }
+
+    .songcontrol {
+        gap: 20px;
+    }
+
+    .songinfo,
+    .songtime {
+        padding: 8px;
+    }
+
+
+
+
+    .spotify_playlist {
+        height: 88vh;
+        border-radius: 0 0 8px 8px;
+    }
+
+
+    .cards {
+        height: 60vh;
+        gap: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:650px) {
+    .left {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+    }
+
+    .songList ul {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .songList {
+        margin: 20px 10px;
+        height: 50vh;
+    }
+
+    .songList ul li {
+        padding: 4px 10px;
+        margin: 8px 5px;
+        height: 5vh;
+    }
+
+
+    .musicImg span {
+        font-size: 12px;
+    }
+
+    .musicImg img {
+        width: 25px;
+    }
+
+    .playnow img {
+        width: 25px;
+    }
+
+
+
+
+
+    .right {
+        width: 100vw;
+        height: 98vh;
+        margin: 0;
+    }
+
+    .header {
+        height: 8vh;
+    }
+
+
+    .header_right a {
+        font-size: 12px;
+    }
+
+    .header_right button {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 10px;
+        padding: 10px 18px;
+    }
+
+    .spotify_playlist {
+        height: 92vh;
+    }
+
+
+
+    /* -----------------------------------  Spotify Playbar ------------------------------------ */
+    .spotify_playbar {
+        width: 89vw;
+        min-height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .seekbar {
+        width: 95%;
+    }
+
+
+
+    .cards {
+        height: 70vh;
+        margin: 10px 0;
+        gap: 50px;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media screen and (max-width: 505px) {
+
+    .home{
+        height: 15vh;
+    }
+    .library{
+        height: 80vh;
+    }
+    .header_right{
+        margin: 0px;
+        gap:3px;
+    }
+    .header_right a {
+        font-size: 10px;
+        padding: 0 1px;
+    }
+    .header_right div{
+        font-size: 20px;
+        margin: 0 6px;
+    }
+
+    .header_right button {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 10px;
+        padding: 6px 10px;
+    }
+
+    .spotify_playlist {
+        height: 92vh;
+    }
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+    .cards {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 262px;
+        height: 350px;
+    }
+
+    .card div {
+        right: 20px;
+        top: var(--top2);
+    }
+
+    .card:hover {
+        --top2: 200px;
+    }
+
+    .card img {
+        width: 260px;
+        height: 265px;
+        padding-bottom: 5px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+    .card p {
+        font-size: 14px;
+        font-weight: 400;
+        display: inline;
+        white-space: wrap;
+    }
+
+
+
+    /* -----------------------------------  Spotify Playbar ------------------------------------ */
+    .spotify_playbar {
+        bottom: 16px;
+        background-color: #3e3d3d;
+        border-radius: 15px;
+        width: 90vw;
+        min-height: 180px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .songcontrol {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .seekbar {
+        width: 96%;
+        bottom: 10px;
+        margin: 2px 4px;
+    }
+
+    .seekbar_circle {
+        width: 16px;
+        height: 16px;
+        bottom: 6px;
+    }
+
+    .songinfo,
+    .songtime {
+        padding: 4px;
+    }
+    
+
+    .right{
+        height: 98vh;
+    }
+    .spotify_playlist{
+        height: 90vh;
+    }
+
+    .volume_duration{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+
+    .volume img{
+        position: relative;
+        margin-right: 0px;
+    }
+
+    .volume-range input{
+        margin-right: 0px;
+    }
+}
