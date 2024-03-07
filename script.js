@@ -20,7 +20,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder){
     currentFolder=folder;
-    let a=await fetch(`https://spotify-789.vercel.app/${folder}/`);
+    let a=await fetch(`/${folder}/`);
     let response= await a.text();
     // console.log(response);
     let div=document.createElement("div");
@@ -74,7 +74,7 @@ const playMusic=(track, pause=false)=>{
 }
 
 async function displayAlbum(){
-    let a=await fetch(`https://spotify-789.vercel.app/songs/`);
+    let a=await fetch(`/songs/`);
     let response= await a.text();
     // console.log(response);
     let div=document.createElement("div");
@@ -87,7 +87,7 @@ async function displayAlbum(){
         if (e.href.includes("/songs")){
             let folder=e.href.split("/").slice(-2)[0];
             //Getting the metadata of the Folder
-            let a=await fetch(`https://spotify-789.vercel.app/songs/${folder}/info.json`);
+            let a=await fetch(`/songs/${folder}/info.json`);
             let response= await a.json();
             // console.log(response);
             cards.innerHTML=cards.innerHTML + `<div data-folder="${folder}" class="card">
