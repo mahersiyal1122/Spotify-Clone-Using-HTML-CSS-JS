@@ -20,9 +20,8 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder){
     currentFolder=folder;
-    let a=await fetch(`${folder}/`);
+    let a=await fetch(`http://127.0.0.1:3000/${folder}/`);
     let response= await a.text();
-    console.log('blah lbah line 25 function fetch upper wlaa', a)
     // console.log(response);
     let div=document.createElement("div");
     div.innerHTML=response;
@@ -64,8 +63,8 @@ async function getSongs(folder){
 
 
 const playMusic=(track, pause=false)=>{
-    // let audio=new Audio("songs/" + track);
-    currentSong.src=`${currentFolder}/` + track
+    // let audio=new Audio("/songs/" + track);
+    currentSong.src=`/${currentFolder}/` + track
     if (!pause){
         currentSong.play(); 
         play.src="images/pausesong.svg";
@@ -75,7 +74,7 @@ const playMusic=(track, pause=false)=>{
 }
 
 async function displayAlbum(){
-    let a=await fetch(`songs/`);
+    let a=await fetch(`http://127.0.0.1:3000/songs/`);
     let response= await a.text();
     // console.log(response);
     let div=document.createElement("div");
@@ -88,13 +87,13 @@ async function displayAlbum(){
         if (e.href.includes("/songs")){
             let folder=e.href.split("/").slice(-2)[0];
             //Getting the metadata of the Folder
-            let a=await fetch(`songs/${folder}/info.json`);
+            let a=await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
             let response= await a.json();
-            console.log(response);
+            // console.log(response);
             cards.innerHTML=cards.innerHTML + `<div data-folder="${folder}" class="card">
             <div><svg class="play-button" width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="#1ED760" /><polygon points="40,30 40,70 70,50" fill="black" /></svg>
             </div>
-            <img src="songs/${folder}/cover.png"
+            <img src="/songs/${folder}/cover.png"
                 alt="">
             <h3>${response.title}</h3>
             <p>${response.description}</p>
