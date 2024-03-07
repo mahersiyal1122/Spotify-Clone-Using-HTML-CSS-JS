@@ -20,7 +20,8 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder){
     currentFolder=folder;
-    let a=await fetch(`/${folder}/`);
+    let githubUrl = `https://raw.githubusercontent.com/mahersiyal1122/Spotify-Clone-Using-HTML-CSS-JS/main/${folder}/`;
+    let a=await fetch(githubUrl);
     let response= await a.text();
     // console.log(response);
     let div=document.createElement("div");
@@ -74,7 +75,8 @@ const playMusic=(track, pause=false)=>{
 }
 
 async function displayAlbum(){
-    let a=await fetch(`/songs/`);
+    let githubUrl = `https://raw.githubusercontent.com/mahersiyal1122/Spotify-Clone-Using-HTML-CSS-JS/main/${folder}/`;
+    let a=await fetch(githubUrl);
     let response= await a.text();
     // console.log(response);
     let div=document.createElement("div");
