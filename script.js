@@ -22,7 +22,7 @@ async function getSongs(folder){
     currentFolder=folder;
     let a=await fetch(`${folder}/`);
     let response= await a.text();
-    console.log('blah lbah line 25 function fetch upper wlaa')
+    console.log('blah lbah line 25 function fetch upper wlaa', a)
     // console.log(response);
     let div=document.createElement("div");
     div.innerHTML=response;
