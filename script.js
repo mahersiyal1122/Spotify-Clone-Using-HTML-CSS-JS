@@ -84,10 +84,12 @@ async function displayAlbum(){
     let array=Array.from(anchors);
     for (let index = 0; index < array.length; index++) {
         const e = array[index];
-        if (e.href.includes("assets/songs")){
-            let folder=e.href.split("/").slice(-2)[0];
+        if (e.href.includes("assets/songs/")){
+            // console.log(e)
+            let folder=e.href.split("/").slice(-1)[0];
             //Getting the metadata of the Folder
             let a=await fetch(`assets/songs/${folder}/info.json`);
+            // console.log(a);
             let response= await a.json();
             // console.log(response);
             cards.innerHTML=cards.innerHTML + `<div data-folder="${folder}" class="card">
